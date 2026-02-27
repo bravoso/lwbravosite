@@ -1,0 +1,36 @@
+:root {
+  --bg: #0a0f1b;
+  --panel: #111a2e;
+  --line: #23395f;
+  --text: #e7ecf7;
+  --muted: #9fb0cd;
+  --primary: #4f8cff;
+  --green: #22c55e;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--text); }
+.topbar { display:flex; justify-content:space-between; align-items:center; padding:12px 18px; border-bottom:1px solid var(--line); position:sticky; top:0; background:#0c1425; z-index:10; }
+.brand { color:#fff; text-decoration:none; font-weight:800; }
+.actions { display:flex; gap:8px; flex-wrap:wrap; }
+.layout { display:grid; grid-template-columns: 340px 1fr; min-height: calc(100vh - 58px); }
+.panel { padding:16px; }
+.settings { border-right:1px solid var(--line); overflow:auto; max-height: calc(100vh - 58px); }
+label { display:block; font-size:.82rem; color:var(--muted); margin:8px 0; }
+input, select, textarea { width:100%; border:1px solid var(--line); background:#0d1629; color:var(--text); border-radius:10px; padding:10px; }
+select { min-height:180px; }
+textarea { min-height:45vh; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; line-height:1.45; }
+.btn { border:none; border-radius:10px; padding:10px 12px; font-weight:700; cursor:pointer; color:#fff; }
+.btn.primary { background:linear-gradient(90deg, var(--primary), #67e8f9); color:#051021; }
+.btn.secondary { background:#274f98; }
+.btn.ghost { background:transparent; border:1px solid var(--line); }
+hr { border:none; border-top:1px solid var(--line); margin:16px 0; }
+.muted { color:var(--muted); font-size:.9rem; }
+.snippet-list { display:grid; gap:8px; }
+.snippet-item { background:#10203e; border:1px solid #33599d; padding:8px; border-radius:8px; cursor:grab; }
+.dropzone { border:1px dashed #4b6da8; border-radius:12px; padding:16px; text-align:center; color:var(--muted); margin:8px 0; }
+.dropzone.drag { border-color: var(--green); color: #d8ffe5; background:#0e2317; }
+.media-list { padding-left:16px; font-size:.9rem; color:var(--muted); }
+.editor-head, .preview-head { display:flex; justify-content:space-between; margin:6px 0; }
+.status { color:var(--muted); font-size:.9rem; }
+#preview { width:100%; min-height:40vh; border:1px solid var(--line); border-radius:12px; background:#fff; }
+@media (max-width: 980px) { .layout { grid-template-columns: 1fr; } .settings { max-height: none; border-right:none; border-bottom:1px solid var(--line);} }

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LW Bravo • Web Editor</title>
+  <meta name="description" content="Editor web para alterar páginas, subir mídia e publicar no GitHub Pages.">
+  <link rel="stylesheet" href="/editor/editor.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/" class="brand">LW Bravo</a>
+    <div class="actions">
+      <button id="saveSettingsBtn" class="btn secondary">Salvar Config</button>
+      <button id="refreshFilesBtn" class="btn ghost">Atualizar Arquivos</button>
+      <button id="deployBtn" class="btn primary">Disparar Deploy</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel settings">
+      <h1>Web Editor</h1>
+      <p class="muted">Edite qualquer página, adicione mídia e publique direto no GitHub.</p>
+
+      <label>GitHub Owner<input id="owner" placeholder="seu-user-ou-org"></label>
+      <label>Repository<input id="repo" placeholder="lwbravosite"></label>
+      <label>Branch<input id="branch" placeholder="work ou main" value="work"></label>
+      <label>Personal Access Token<input id="token" type="password" placeholder="github_pat_..." autocomplete="off"></label>
+      <label>Workflow file para deploy<input id="workflow" value="pages.yml"></label>
+
+      <hr>
+      <h2>Arquivos do site</h2>
+      <select id="fileSelect" size="10"></select>
+      <button id="loadFileBtn" class="btn secondary">Carregar arquivo</button>
+      <button id="saveFileBtn" class="btn primary">Salvar no GitHub</button>
+
+      <hr>
+      <h2>Blocos rápidos</h2>
+      <p class="muted">Clique para inserir no cursor ou arraste para o editor.</p>
+      <div id="snippetList" class="snippet-list"></div>
+
+      <hr>
+      <h2>Mídia (drag & drop)</h2>
+      <div id="dropzone" class="dropzone">Arraste imagens/vídeos aqui</div>
+      <label>Pasta destino<input id="mediaPath" value="assets/images"></label>
+      <button id="uploadMediaBtn" class="btn secondary">Upload mídia selecionada</button>
+      <ul id="mediaList" class="media-list"></ul>
+    </aside>
+
+    <section class="panel editor-panel">
+      <div class="editor-head">
+        <strong id="currentFile">Nenhum arquivo carregado</strong>
+        <span id="status" class="status">Pronto.</span>
+      </div>
+      <textarea id="editor" spellcheck="false"></textarea>
+      <div class="preview-head">Preview ao vivo</div>
+      <iframe id="preview" title="preview"></iframe>
+    </section>
+  </main>
+
+  <script src="/editor/editor.js" defer></script>
+</body>
+</html>
