@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LW Bravo • Hub</title>
+  <meta name="description" content="Hub principal com acesso ao Link na Bio e às páginas de vendas LW Bravo.">
+  <meta name="theme-color" content="#0b0f1a">
+  <link rel="preload" href="/styles.css" as="style">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="container topbar">
+    <a class="brand" href="/">LW Bravo</a>
+    <nav class="nav">
+      <a href="/bio/">Link na Bio</a>
+      <a href="/desafio-7d/">Desafio 7D</a>
+    </nav>
+  </header>
+
+  <main class="container hero">
+    <p class="eyebrow">Site Multifuncional</p>
+    <h1>Landing pages rápidas para <span class="highlight">Meta Ads</span>, Fiverr e vendas.</h1>
+    <p class="muted">Estrutura leve, profissional e pronta para deploy no Netlify e GitHub Pages.</p>
+
+    <div class="grid cards">
+      <a class="card" href="/bio/">
+        <h2>Link na Bio</h2>
+        <p>Página enxuta para Instagram/TikTok/WhatsApp com botões de alta conversão.</p>
+      </a>
+      <a class="card" href="/desafio-7d/">
+        <h2>Página de Vendas</h2>
+        <p>Copy completa do Desafio 7D, CTAs claros e layout orientado à performance.</p>
+      </a>
+      <a class="card" href="#">
+        <h2>Fiverr</h2>
+        <p>Espaço reservado para portfólio, reviews e oferta principal de serviços.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer class="container footer">
+    <small>© <span id="year"></span> LW Bravo. Feito para velocidade e conversão.</small>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
