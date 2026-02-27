@@ -21,7 +21,9 @@ Acesse `http://localhost:8080`.
 
 ## Deploy no GitHub Pages
 
-O workflow `.github/workflows/pages.yml` já faz deploy automático para GitHub Pages em push na branch `main`.
+O workflow `.github/workflows/pages.yml` publica automaticamente o site na branch `gh-pages` em push para `main` ou `work`.
+
+No repositório GitHub, configure em **Settings → Pages** a fonte como **Deploy from a branch** e selecione **gh-pages / root**.
 
 ## Como adicionar imagens nas páginas de venda
 
